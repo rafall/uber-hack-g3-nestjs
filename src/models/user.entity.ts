@@ -7,7 +7,10 @@ export class UserEntity {
   id: number;
 
   @Column()
-  name: string;
+  firstName: string;
+
+  @Column()
+  lastName: string;
 
   @Column()
   document: string;
@@ -20,5 +23,14 @@ export class UserEntity {
 
   @Column()
   password: string;
+
+  @Column()
+  address: string;
+
+  @Column()
+  houseNumber: string;
+
+  @Column()
+  referencePoint: string;
 
 }

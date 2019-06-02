@@ -1,6 +1,6 @@
 import { Controller, Param, Get, Post, Body } from '@nestjs/common';
 import { UserService } from '@services/user.service';
-import { RegisterDriverDTO, RiderDTO } from 'dto';
+import { RiderDTO } from 'dto';
 
 @Controller('rider')
 export class RiderController {

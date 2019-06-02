@@ -6,7 +6,7 @@ export class CarEntity {
   id: number;
 
   @Column()
-  name: string;
+  model: string;
 
   @Column()
   color: string;
@@ -14,6 +14,4 @@ export class CarEntity {
   @Column()
   registrationPlate: string;
 
-  @Column()
-  year: number;
 }
