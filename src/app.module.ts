@@ -2,6 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { DriverController } from '@controllers';
 
 @Module({
   imports: [
@@ -16,7 +17,10 @@ import { TypeOrmModule } from '@nestjs/typeorm';
       synchronize: true,
     }),
   ],
-  controllers: [AppController],
+  controllers: [
+    AppController,
+    DriverController,
+  ],
   providers: [AppService],
 })
 export class AppModule {}

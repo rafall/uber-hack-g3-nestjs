@@ -8,8 +8,13 @@
     "target": "es6",
     "sourceMap": true,
     "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true
+    "baseUrl": "./src",
+    "incremental": true,
+    "paths": {
+      "@controllers/*": ["controllers/*"],
+      "@controllers": ["controllers"]
+    }
   },
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  
 }
