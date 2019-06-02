@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { DriverController } from '@controllers';
+import { DriverController, RiderController } from '@controllers';
 import { CarEntity, UserEntity, DriverEntity, RiderEntity } from '@models';
 import { UserService } from '@services';
 
@@ -23,6 +23,7 @@ import { UserService } from '@services';
   controllers: [
     AppController,
     DriverController,
+    RiderController,
   ],
   providers: [
     AppService,

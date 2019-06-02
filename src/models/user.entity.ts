@@ -15,4 +15,10 @@ export class UserEntity {
   @Column()
   photoUrl: string;
 
+  @Column()
+  phoneNumber: string;
+
+  @Column()
+  password: string;
+
 }

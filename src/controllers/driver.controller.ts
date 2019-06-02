@@ -1,6 +1,6 @@
 import { Controller, Param, Get, Post, Body } from '@nestjs/common';
 import { UserService } from '@services/user.service';
-import { RegisterDriverDTO } from 'dto';
+import { DriverDTO } from 'dto';
 
 @Controller('driver')
 export class DriverController {
@@ -15,7 +15,7 @@ export class DriverController {
     }
 
     @Post()
-    async registerDriver(@Body() body: RegisterDriverDTO) {
+    async registerDriver(@Body() body: DriverDTO) {
         const car = await this.userService.registerCar(body.car);
         const driverData = body as any;
         driverData.car = car.id;

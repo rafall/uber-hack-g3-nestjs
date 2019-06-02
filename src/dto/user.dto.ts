@@ -3,4 +3,6 @@ export class UserDTO {
     name: string;
     document: string;
     photoUrl: string;
+    phoneNumber: string;
+    password: string;
 }

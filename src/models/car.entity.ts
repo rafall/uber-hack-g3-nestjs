@@ -14,4 +14,6 @@ export class CarEntity {
   @Column()
   registrationPlate: string;
 
+  @Column()
+  year: number;
 }

@@ -3,4 +3,5 @@ export class CarDTO {
     name: string;
     color: string;
     registrationPlate: string;
+    year: number;
 }
