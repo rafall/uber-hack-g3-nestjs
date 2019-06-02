@@ -3,6 +3,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { DriverController } from '@controllers';
+import { CarEntity, UserEntity, DriverEntity, RiderEntity } from '@models';
+import { UserService } from '@services';
 
 @Module({
   imports: [
@@ -16,11 +18,15 @@ import { DriverController } from '@controllers';
       entities: [__dirname + '/**/*.entity{.ts,.js}'],
       synchronize: true,
     }),
+    TypeOrmModule.forFeature([UserEntity, DriverEntity, RiderEntity, CarEntity]),
   ],
   controllers: [
     AppController,
     DriverController,
   ],
-  providers: [AppService],
+  providers: [
+    AppService,
+    UserService,
+  ],
 })
 export class AppModule {}

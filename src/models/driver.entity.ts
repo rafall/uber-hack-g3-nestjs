@@ -1,11 +1,11 @@
-import { Entity, Column, PrimaryGeneratedColumn, Unique, JoinColumn, OneToOne } from 'typeorm';
-import { User } from './user.entity';
-import { Car } from './car.entity';
+import { Entity, JoinColumn, OneToOne } from 'typeorm';
+import { UserEntity } from './user.entity';
+import { CarEntity } from './car.entity';
 
-@Entity()
-export class Driver extends User {
-    @OneToOne(type => Car)
+@Entity('driver')
+export class DriverEntity extends UserEntity {
+    @OneToOne(type => CarEntity)
     @JoinColumn()
-    profile: Car;
+    car: CarEntity;
 
 }

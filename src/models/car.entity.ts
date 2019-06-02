@@ -1,8 +1,7 @@
-import { Entity, Column, PrimaryGeneratedColumn, Unique } from 'typeorm';
+import { Entity, Column, PrimaryGeneratedColumn } from 'typeorm';
 
-@Entity()
-@Unique(['document'])
-export class Car {
+@Entity('car')
+export class CarEntity {
   @PrimaryGeneratedColumn()
   id: number;
 

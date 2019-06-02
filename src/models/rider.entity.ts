@@ -1,8 +1,8 @@
 import { Entity, Column, PrimaryGeneratedColumn, Unique } from 'typeorm';
-import { User } from './user.entity';
+import { UserEntity } from './user.entity';
 
-@Entity()
-@Unique(['document'])
-export class Rider extends User {
-
+@Entity('rider')
+export class RiderEntity extends UserEntity {
+    @Column()
+    promoCode: string;
 }

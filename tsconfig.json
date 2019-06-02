@@ -12,7 +12,13 @@
     "incremental": true,
     "paths": {
       "@controllers/*": ["controllers/*"],
-      "@controllers": ["controllers"]
+      "@controllers": ["controllers"],
+      "@services/*": ["services/*"],
+      "@services": ["services"],
+      "@models/*": ["models/*"],
+      "@models": ["models"],
+      "@dtos/*": ["dtos/*"],
+      "@dtos": ["dtos"]
     }
   },
   "exclude": ["node_modules"],

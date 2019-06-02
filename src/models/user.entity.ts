@@ -1,8 +1,8 @@
 import { Entity, Column, PrimaryGeneratedColumn, Unique } from 'typeorm';
 
-@Entity()
+@Entity('user')
 @Unique(['document'])
-export class User {
+export class UserEntity {
   @PrimaryGeneratedColumn()
   id: number;
 
